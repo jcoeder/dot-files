@@ -17,7 +17,7 @@ cd vim
 git pull
 ./configure --with-features=huge --prefix=/usr/local \
      --enable-python3interp \
-     --with-python3-config-dir=/usr/lib/python3.6/config-*
+     --with-python3-config-dir=/usr/lib/python3.*/conf*
 make distclean
 make
 make install
