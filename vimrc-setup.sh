@@ -3,13 +3,13 @@
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
-    apt-get install curl git make build-essential libncurses-dev -y
+    sudo apt-get install curl git gcc make build-essential libncurses-dev -y
 elif [ -f /etc/debian_version ]; then
     # Older Debian/Ubuntu/etc.
-    apt-get install curl git make build-essential libncurses-dev -y
+    sudo apt-get install curl git gcc make build-essential libncurses-dev -y
 elif [ -f /etc/redhat-release ]; then
     # Older Red Hat, CentOS, etc.
-    apt-get install curl git make -y
+    sudo yum install curl git make -y
 fi
 
 cd ~
@@ -24,7 +24,7 @@ make distclean
     --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu
     --enable-python3interp \
     --with-python3-command=/usr/bin/python3 \
-    --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu/ \
+    --with-python3-config-dir=/usr/lib/python3.8/config-3.8-x86_64-linux-gnu/ \
     --enable-cscope \
     --prefix=$HOME/.local
 make
