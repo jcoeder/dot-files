@@ -20,6 +20,7 @@ make distclean
 make
 make install
 
+cd ~
 
 mkdir -p ~/.vim/plugged/
 mkdir -p ~/.vim/undodir/
