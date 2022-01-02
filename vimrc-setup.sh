@@ -15,7 +15,7 @@ fi
 git clone https://github.com/vim/vim.git
 cd vim
 git pull
-./configure --with-features=huge
+./configure --with-features=huge --enable-pythoninterp --enable-python3interp
 make distclean
 make
 make install
