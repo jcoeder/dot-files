@@ -6,10 +6,10 @@ if [ -f /etc/lsb-release ]; then
     apt-get install vim curl git make -y
 elif [ -f /etc/debian_version ]; then
     # Older Debian/Ubuntu/etc.
-    apt-get install vim curl git make -y
+    apt-get install vim curl git make build-essential -y
 elif [ -f /etc/redhat-release ]; then
     # Older Red Hat, CentOS, etc.
-    apt-get install vim curl git make -y
+    apt-get install vim curl git make build-essential -y
 fi
 
 git clone https://github.com/vim/vim.git
