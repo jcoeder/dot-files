@@ -16,9 +16,16 @@ git clone https://github.com/vim/vim.git
 cd vim
 git pull
 make distclean
-./configure --with-features=huge --prefix=/usr/local \
-     --enable-python3interp \
-     --with-python3-config-dir=/usr/lib/python3.*/conf*
+./configure --with-features=huge \
+    --enable-multibyte \
+    --enable-pythoninterp=yes \
+    --with-python-config-dir=/usr/lib/python2*/config* \
+    --enable-python3interp=yes \
+    --with-python3-config-dir=/usr/lib/python3.*/config* \
+    --enable-cscope \
+    --prefix=/usr/local/
+
+
 make
 make install
 
