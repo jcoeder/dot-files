@@ -15,6 +15,7 @@ fi
 git clone https://github.com/vim/vim.git
 cd vim
 git pull
+make distclean
 ./configure --with-features=huge --prefix=/usr/local \
      --enable-python3interp \
      --with-python3-config-dir=/usr/lib/python3.*/conf*
