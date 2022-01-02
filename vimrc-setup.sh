@@ -23,9 +23,10 @@ make distclean
     --enable-pythoninterp \
     --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu
     --enable-python3interp \
+    --with-python3-command=/usr/bin/python3 \
     --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu/ \
     --enable-cscope \
-    --prefix=/usr/local/
+    --prefix=$HOME/.local
 make
 make install
 
