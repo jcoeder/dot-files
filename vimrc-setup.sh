@@ -3,24 +3,23 @@
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
-    apt-get install vim curl git make -y
+    apt-get install vim curl git make libncurses-dev -y
 elif [ -f /etc/debian_version ]; then
     # Older Debian/Ubuntu/etc.
-    apt-get install vim curl git make build-essential -y
+    apt-get install vim curl git make build-essential libncurses-dev -y
 elif [ -f /etc/redhat-release ]; then
     # Older Red Hat, CentOS, etc.
-    apt-get install vim curl git make build-essential -y
+    apt-get install vim curl git make -y
 fi
 
 git clone https://github.com/vim/vim.git
 cd vim
 git pull
 ./configure --with-features=huge
-make
-make check
-make install
-make clean
 make distclean
+make
+make install
+
 
 mkdir -p ~/.vim/plugged/
 mkdir -p ~/.vim/undodir/
