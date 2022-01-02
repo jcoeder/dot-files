@@ -14,6 +14,8 @@ elif [ -f /etc/redhat-release ]; then
     apt-get install curl git make -y
 fi
 
+cd ~
+rm -rf vim/
 git clone https://github.com/vim/vim.git
 cd vim
 git pull
