@@ -1,5 +1,7 @@
 #!/bin/bash
 
+shopt -s extglob
+
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
@@ -18,14 +20,12 @@ git pull
 make distclean
 ./configure --with-features=huge \
     --enable-multibyte \
-    --enable-pythoninterp=yes \
+    --enable-pythoninterp \
     --with-python-config-dir=/usr/lib/python2*/config-* \
-    --enable-python3interp=yes \
+    --enable-python3interp \
     --with-python3-config-dir=/usr/lib/python3.*/config-* \
     --enable-cscope \
     --prefix=/usr/local/
-
-
 make
 make install
 
