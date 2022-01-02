@@ -1,5 +1,7 @@
 #!/bin/bash
 
+shopt -s expand_aliases
+
 alias python=python3
 
 if [ -f /etc/lsb-release ]; then
