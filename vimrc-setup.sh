@@ -1,7 +1,5 @@
 #!/bin/bash
 
-shopt -s extglob
-
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
