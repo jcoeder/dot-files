@@ -1,8 +1,5 @@
 #!/bin/bash
 
-shopt -s expand_aliases
-alias python=python3
-
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
@@ -18,7 +15,9 @@ fi
 git clone https://github.com/vim/vim.git
 cd vim
 git pull
-./configure --with-features=huge --enable-pythoninterp --enable-python3interp
+./configure --with-features=huge --prefix=/usr/local \
+     --enable-python3interp \
+     --with-python3-config-dir=/usr/lib/python3.6/config-*
 make distclean
 make
 make install
@@ -35,5 +34,3 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 vim +PlugInstall +qall
-
-unalias python
