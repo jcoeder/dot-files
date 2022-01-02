@@ -21,9 +21,9 @@ make distclean
 ./configure --with-features=huge \
     --enable-multibyte \
     --enable-pythoninterp \
-    --with-python-config-dir=/usr/lib/python2*/config-* \
+    --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu
     --enable-python3interp \
-    --with-python3-config-dir=/usr/lib/python3.*/config-* \
+    --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu/ \
     --enable-cscope \
     --prefix=/usr/local/
 make
