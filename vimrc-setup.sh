@@ -1,5 +1,8 @@
 #!/bin/bash
 
+curl https://raw.githubusercontent.com/jcoeder/dot-files/master/.bashrc \
+    --output ~/.bashrc
+
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
     . /etc/lsb-release
