@@ -5,7 +5,6 @@ curl https://raw.githubusercontent.com/jcoeder/dot-files/master/.bashrc \
 
 if [ -f /etc/lsb-release ]; then
     # For some versions of Debian/Ubuntu without lsb_release command
-    . /etc/lsb-release
     sudo apt-get install curl git gcc make cmake build-essential libncurses-dev python3-dev -y
 elif [ -f /etc/debian_version ]; then
     # Older Debian/Ubuntu/etc.
