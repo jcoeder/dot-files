@@ -43,5 +43,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 vim +PlugInstall +qall
 
-~/.vim/plugged/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe
 python3 install.py
